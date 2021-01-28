@@ -1,20 +1,12 @@
 package main
 
-import (
-	"io/ioutil"
-)
+// TemplateDir path to templates
+const TemplateDir = "./templates/*.tmpl"
+
+// OutputDir path to output files
+const OutputDir = "./output/"
 
 func main() {
-
+	firstPost := NewBlogPost("./content/first-post.txt")
+	firstPost.Render(TemplateDir, OutputDir+"first-post.html")
 }
-
-func readFile() string {
-	fileContents, err := ioutil.ReadFile("first-post.txt")
-	if err != nil {
-		panic(err)
-	}
-
-	return string(fileContents)
-}
-
-func renderTemplate()
