@@ -1,6 +1,5 @@
 package main
 
-<<<<<<< HEAD
 import (
 	"io/ioutil"
 )
@@ -19,10 +18,3 @@ func readFile() string {
 }
 
 func renderTemplate()
-=======
-import "fmt"
-
-func main() {
-	fmt.Println("Hello, world!")
-}
->>>>>>> 9514ac8a2c135a448a2b15a4b246dcd5d59ee7bf
