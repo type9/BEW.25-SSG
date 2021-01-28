@@ -14,7 +14,7 @@ type BlogPost struct {
 
 // NewBlogPost Constructor
 func NewBlogPost(contentPath string) (blogPost BlogPost) {
-	const TemplateName = "blogPost.tmpl"
+	const TemplateName = "blogpost.tmpl"
 	blogPost = BlogPost{}
 
 	blogPost.templateName = TemplateName
@@ -32,8 +32,8 @@ func readContent(filePath string) string {
 }
 
 //Render takes a generic template directory and outputs using object defined template name
-func (blogPost BlogPost) Render(templateDir, outputDir string) {
-	file, err := os.Create(outputDir)
+func (blogPost BlogPost) Render(templateDir, path string) {
+	file, err := os.Create(path)
 	defer file.Close()
 	if err != nil {
 		panic(err)
